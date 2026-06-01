@@ -1,0 +1,19 @@
+{
+  "input_file": "sample-output/direct_leak.info",
+  "findings": [
+    {
+      "source": "input",
+      "sink": "printf",
+      "path": [
+        "input",
+        "printf"
+      ],
+      "evidence": "TAINTED source=input path=input -> printf",
+      "severity": "medium",
+      "line_number": 2,
+      "parser_rule": "explicit-path"
+    }
+  ],
+  "safe_flows": [],
+  "ignored_lines": 0
+}

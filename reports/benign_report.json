@@ -1,0 +1,9 @@
+{
+  "input_file": "sample-output/benign.info",
+  "findings": [],
+  "safe_flows": [
+    "input -> strlen (safe local usage)",
+    "internal branch completed without configured sink exposure"
+  ],
+  "ignored_lines": 0
+}

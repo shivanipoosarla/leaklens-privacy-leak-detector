@@ -1,0 +1,20 @@
+{
+  "input_file": "sample-output/log_leak.info",
+  "findings": [
+    {
+      "source": "secret",
+      "sink": "fprintf",
+      "path": [
+        "secret",
+        "log_data",
+        "fprintf"
+      ],
+      "evidence": "TAINTED source=secret path=secret -> log_data -> fprintf",
+      "severity": "medium",
+      "line_number": 2,
+      "parser_rule": "explicit-path"
+    }
+  ],
+  "safe_flows": [],
+  "ignored_lines": 0
+}

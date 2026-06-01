@@ -1,0 +1,9 @@
+digraph LeakLens {
+  rankdir="LR";
+  "token" -> "printf";
+  "password" -> "send";
+  "api_key" -> "serializer";
+  "serializer" -> "write";
+  "session_id" -> "audit_log";
+  "audit_log" -> "fprintf";
+}

@@ -1,0 +1,8 @@
+# Mixed taint-style formats to test parser robustness
+[INFO] KLEE completed path exploration for leak_printf.c
+WARNING: tainted variable 'token' reached sink printf()
+Leak detected: symbolic input password reached send()
+LEAK: source=api_key sink=write path=api_key -> serializer -> write
+user_id -> mask_value -> strlen
+TAINTED source=session_id path=session_id -> audit_log -> fprintf
+ordinary compiler note with no privacy evidence

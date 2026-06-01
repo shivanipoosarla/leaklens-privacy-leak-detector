@@ -1,0 +1,5 @@
+digraph LeakLens {
+  rankdir="LR";
+  "secret" -> "log_data";
+  "log_data" -> "fprintf";
+}

@@ -1,0 +1,3 @@
+# Synthetic taint-style output for examples/benign.c
+input -> strlen (safe local usage)
+internal branch completed without configured sink exposure

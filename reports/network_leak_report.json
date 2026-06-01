@@ -1,0 +1,20 @@
+{
+  "input_file": "sample-output/network_leak.info",
+  "findings": [
+    {
+      "source": "sensitive",
+      "sink": "send",
+      "path": [
+        "sensitive",
+        "network_send",
+        "send"
+      ],
+      "evidence": "LEAK source=sensitive path=sensitive -> network_send -> send",
+      "severity": "high",
+      "line_number": 2,
+      "parser_rule": "explicit-path"
+    }
+  ],
+  "safe_flows": [],
+  "ignored_lines": 0
+}

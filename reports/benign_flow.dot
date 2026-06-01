@@ -1,0 +1,4 @@
+digraph LeakLens {
+  rankdir="LR";
+  "no leak detected";
+}

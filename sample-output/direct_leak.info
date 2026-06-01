@@ -1,0 +1,2 @@
+# Synthetic taint-style output for examples/leak_printf.c
+TAINTED source=input path=input -> printf

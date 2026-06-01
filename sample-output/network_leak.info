@@ -1,0 +1,2 @@
+# Synthetic taint-style output for examples/leak_network.c
+LEAK source=sensitive path=sensitive -> network_send -> send

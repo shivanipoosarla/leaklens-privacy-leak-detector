@@ -1,0 +1,59 @@
+{
+  "input_file": "sample-output/realistic_formats.info",
+  "findings": [
+    {
+      "source": "token",
+      "sink": "printf",
+      "path": [
+        "token",
+        "printf"
+      ],
+      "evidence": "WARNING: tainted variable 'token' reached sink printf()",
+      "severity": "medium",
+      "line_number": 3,
+      "parser_rule": "declared-sink"
+    },
+    {
+      "source": "password",
+      "sink": "send",
+      "path": [
+        "password",
+        "send"
+      ],
+      "evidence": "Leak detected: symbolic input password reached send()",
+      "severity": "high",
+      "line_number": 4,
+      "parser_rule": "declared-sink"
+    },
+    {
+      "source": "api_key",
+      "sink": "write",
+      "path": [
+        "api_key",
+        "serializer",
+        "write"
+      ],
+      "evidence": "LEAK: source=api_key sink=write path=api_key -> serializer -> write",
+      "severity": "high",
+      "line_number": 5,
+      "parser_rule": "explicit-path"
+    },
+    {
+      "source": "session_id",
+      "sink": "fprintf",
+      "path": [
+        "session_id",
+        "audit_log",
+        "fprintf"
+      ],
+      "evidence": "TAINTED source=session_id path=session_id -> audit_log -> fprintf",
+      "severity": "medium",
+      "line_number": 7,
+      "parser_rule": "explicit-path"
+    }
+  ],
+  "safe_flows": [
+    "user_id -> mask_value -> strlen"
+  ],
+  "ignored_lines": 2
+}
