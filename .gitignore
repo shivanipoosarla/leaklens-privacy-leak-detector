@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.env
+.venv/
+venv/
+.DS_Store
+reports/*_report.md
+reports/*_report.json
+reports/*_flow.dot
+!reports/README.md
+!reports/*.md
